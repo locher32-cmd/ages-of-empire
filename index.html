@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#120d08">
+<title>Ages of Empire</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Alegreya+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <canvas id="map"></canvas>
+
+  <div id="topbar" class="hud hidden">
+    <div class="stat" id="st-gold" data-tip="gold"></div>
+    <div class="stat" id="st-sci" data-tip="sci"></div>
+    <div class="stat" id="st-cul" data-tip="cul"></div>
+    <div class="stat" id="st-faith" data-tip="faith"></div>
+    <div class="stat" id="st-happy" data-tip="happy"></div>
+    <div class="stat" id="st-tour" data-tip="tour"></div>
+    <div class="spacer"></div>
+    <div class="stat turn" id="st-turn"></div>
+  </div>
+
+  <div id="sidemenu" class="hud hidden">
+    <button class="sbtn" data-act="tech" title="Technology">⚗<span>Tech</span></button>
+    <button class="sbtn" data-act="policies" title="Social Policies">📜<span>Policy</span></button>
+    <button class="sbtn" data-act="religion" title="Religion">🕊<span>Faith</span></button>
+    <button class="sbtn" data-act="diplo" title="Diplomacy">🤝<span>Diplo</span></button>
+    <button class="sbtn" data-act="overview" title="Empire Overview">📊<span>Empire</span></button>
+    <button class="sbtn" data-act="pedia" title="Civilopedia">📖<span>Pedia</span></button>
+    <button class="sbtn" data-act="menu" title="Menu">☰<span>Menu</span></button>
+  </div>
+
+  <div id="research-chip" class="hud hidden"></div>
+  <div id="notes" class="hud hidden"></div>
+  <div id="unitpanel" class="hud hidden"></div>
+
+  <div id="bottomright" class="hud hidden">
+    <div id="zoomctl"><button id="zin">+</button><button id="zout">−</button><button id="zyield" title="Toggle tile yields">⊞</button></div>
+    <canvas id="minimap" width="200" height="120"></canvas>
+    <div id="endrow">
+      <button id="btn-endturn">End Turn</button>
+      <button id="btn-skipall" title="End turn now">⏭</button>
+    </div>
+  </div>
+
+  <div id="citypanel" class="hidden"></div>
+  <div id="modal-root"></div>
+  <div id="tooltip" class="hidden"></div>
+  <div id="toast" class="hidden"></div>
+  <div id="busy" class="hidden"><div class="busy-box"><div class="busy-title">The world turns…</div><div class="busy-bar"><div id="busy-fill"></div></div><div id="busy-text"></div></div></div>
+</div>
+
+<script src="js/data_core.js"></script>
+<script src="js/data_rules.js"></script>
+<script src="js/data_civs.js"></script>
+<script src="js/hex.js"></script>
+<script src="js/mapgen.js"></script>
+<script src="js/rules.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/units.js"></script>
+<script src="js/diplo.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/save.js"></script>
+<script src="js/render.js"></script>
+<script src="js/gfx/core.js"></script>
+<script src="js/gfx/terrain.js"></script>
+<script src="js/gfx/nature.js"></script>
+<script src="js/gfx/settlements.js"></script>
+<script src="js/gfx/human.js"></script>
+<script src="js/gfx/gear.js"></script>
+<script src="js/gfx/units.js"></script>
+<script src="js/gfx/effects.js"></script>
+<script src="js/gfx/heraldry.js"></script>
+<script src="js/gfx/details.js"></script>
+<script src="js/gfx/cinematics.js"></script>
+<script src="js/gfx/wonders.js"></script>
+<script src="js/gfx/atmosphere.js"></script>
+<script src="js/gfx/portraits.js"></script>
+<script src="js/gfx/splash.js"></script>
+<script src="js/gfx/nwonders.js"></script>
+<script src="js/gfx/water.js"></script>
+<script src="js/gfx/water_hook.js"></script>
+<script src="js/gfx/blend.js"></script>
+<script src="js/gfx/weather.js"></script>
+<script src="js/gfx/weather_hook.js"></script>
+<script src="js/gfx/skylight.js"></script>
+<script src="js/gfx/paths.js"></script>
+<script src="js/gfx/install.js"></script>
+<script src="js/sfx.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/screens.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
